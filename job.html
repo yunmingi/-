@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부스트랩 인턴</title>
+  <style>
+    /* 기본 스타일 설정 */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 제목 스타일 */
+    h1.ttl {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    /* 회사 정보 스타일 */
+    .company_info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .company_name a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .company_name a:hover {
+      text-decoration: underline;
+    }
+
+    .v_bar {
+      margin: 0 10px;
+    }
+
+    .job_location {
+      font-size: 14px;
+    }
+
+    /* 탭 버튼 스타일 */
+    .tab_list {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .tab_item {
+      margin-right: 10px;
+    }
+
+    .react_btn {
+      background: none;
+      border: 1px solid #007bff;
+      color: #007bff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .tab_item.on .react_btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .react_btn:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+
+    /* 기업 소개 섹션 스타일 */
+    .recruitment-detail__box {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .recruitment-detail__tit {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .recruitment-detail__txt {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* 게시판 섹션 스타일 */
+    .board_section {
+      padding: 20px;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .board_title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .board_post {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .post_title a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    .post_title a:hover {
+      text-decoration: underline;
+    }
+
+    .post_summary {
+      font-size: 14px;
+      color: #666;
+      margin: 5px 0;
+    }
+
+    .post_date {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .board_more {
+      display: inline-block;
+      margin-top: 10px;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .board_more:hover {
+      text-decoration: underline;
+    }
+
+    /* 뉴스 링크 스타일 */
+    a.relative {
+      display: block;
+      height: 50px;
+      padding: 0 16px;
+      font-size: 15px;
+      line-height: 50px;
+      color: #4b4c50;
+      text-align: center;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    a.relative:hover {
+      color: #00c362;
+    }
+
+    a.relative::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 2px;
+      width: calc(100% - 32px);
+      background-color: #00c362;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="lft">
+    <h1 class="ttl">[부스트랩] 브랜드/미디어 바이럴 마케터 전환형 인턴(3개월)</h1>
+    <div class="company_info">
+      <div class="about_company">
+        <div class="inner">
+          <span class="company_name">
+            <a href="/companies/353024/info/(주)부스트랩">(주)부스트랩</a>
+          </span>
+          <span class="v_bar">|</span>
+          <span class="job_location"><span class="item">서울</span></span>
+          <div class="tab_list" data-id="353024">
+            <div class="tab_item on">
+              <button class="react_btn" type="button">상세</button>
+            </div>
+            <div class="tab_item">
+              <button class="react_btn" type="button" data-page="reviews">리뷰</button>
+            </div>
+            <div class="tab_item">
+              <button class="react_btn" type="button" data-page="interviews">면접</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="recruitment-detail__box">
+    <h3 class="recruitment-detail__tit">기업 소개</h3>
+    <p class="recruitment-detail__txt">
+      Boost Your Career!<br>
+      부스트랩은 '고객의 목소리'에서 '고객을 위한 브랜드'를 인큐베이팅 하는 대한민국 대표 브랜드/미디어 커머스입니다.<br><br>
+      우리는 일상의 문제를 해결하는 새로운 제품과 창의적인 콘텐츠를 기획해 고객에게 더 나은 가치와 경험을 제공한다는 모토를 가지고 있습니다.<br>
+      이를 위해 5가지의 브랜드를 운영하며, 제품 중심의 수명이 짧은 브랜드가 아닌 오랜 시간 사랑받는 브랜드를 만들고 있습니다.<br><br>
+      부스트랩은 창립 이후 단 한 번의 외부 투자 없이 5년 연속 성장해 왔으며, 고객/데이터를 기반으로 한 성공 전략을 통해 글로벌 시장으로 영역을 확장하고 있습니다. 업계 최고의 역량을 보유한 140여 명의 구성원들과 No.1 Global Brand Incubator를 향해 나아갈 당신을 기다립니다.<br><br>
+      - 창립 5년 반, 누적 매출액 1,350억 돌파<br>
+      - 1년 만에 일본 큐텐 매출액 5000% 상승<br>
+      - 루아페 일본 큐텐 뷰티 종합 카테고리 2위, 향수 카테고리 1위 달성<br>
+      - 올리브영 전국 매장 입점 및 향수, 샴푸, 클렌저 카테고리 Best 1 선정<br><br>
+      Boost Brand<br>
+      고객의 목소리에서 고객을 위한 브랜드를 만듭니다.<br><br>
+      [1] 라이프케어 브랜드 'La vikit'<br>
+      [2] 내 몸의 건강한 습관 'ergobody'<br>
+      [3] 두피케어 전문 브랜드 'EPUNOL'<br>
+      [4] 시선을 끄는 당신만의 향 'LUAFEE'<br>
+      [5] 비건 뷰티 브랜드 'Veganifect'<br>
+    </p>
+  </div>
+  
+  <!-- 게시판 섹션 추가 -->
+  <div class="board_section">
+    <h3 class="board_title">게시판</h3>
+    <div class="board_post">
+      <h4 class="post_title"><a href="/posts/1">부스트랩 인턴 후기</a></h4>
+      <p class="post_summary">부스트랩에서 3개월간의 인턴십을 마치며 느낀 점들...</p>
+      <span class="post_date">2024-08-20</span>
+    </div>
+    <div class="board_post">
+      <h4 class="post_title"><a href="/posts/2">부스트랩의 업무 환경</a></h4>
+      <p class="post_summary">부스트랩에서의 업무 환경과 팀 문화에 대해 공유합니다.</p>
+      <span class="post_date">2024-08-18</span>
+    </div>
+    <div class="board_post">
+      <h4 class="post_title"><a href="/posts/3">부스트랩에서 성장하기</a></h4>
+      <p class="post_summary">부스트랩에서의 커리어 성장 가능성에 대해 이야기해봅니다.</p>
+      <span class="post_date">2024-08-15</span>
+    </div>
+    <a class="board_more" href="/board">더보기</a>
+  </div>
+  
+  <a target="_self" class="relative block h-[50px] px-[16px] text-[15px] leading-[50px] text-[#4b4c50] transition hover:text-green-500 after:absolute after:bottom-0 after:left-[50%] after:h-[2px] after:w-[calc(100%-32px)] after:-translate-x-1/2 after:bg-[#00c362]" href="/contents">뉴스</a>
+</body>
+</html>
+
+/* styles.css */
+
+/* 기본 스타일 설정 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 제목 스타일 */
+h1.ttl {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* 회사 정보 스타일 */
+.company_info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.company_name a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.company_name a:hover {
+  text-decoration: underline;
+}
+
+.v_bar {
+  margin: 0 10px;
+}
+
+.job_location {
+  font-size: 14px;
+}
+
+/* 탭 버튼 스타일 */
+.tab_list {
+  display: flex;
+  margin-left: auto;
+}
+
+.tab_item {
+  margin-right: 10px;
+}
+
+.react_btn {
+  background: none;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab_item.on .react_btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.react_btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* 기업 소개 섹션 스타일 */
+.recruitment-detail__box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.recruitment-detail__tit {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.recruitment-detail__txt {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 게시판 섹션 스타일 */
+.board_section {
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.board_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.board_post {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.post_title a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.post_title a:hover {
+  text-decoration: underline;
+}
+
+.post_summary {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.post_date {
+  font-size: 12px;
+  color: #999;
+}
+
+.board_more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.board_more:hover {
+  text-decoration: underline;
+}
+

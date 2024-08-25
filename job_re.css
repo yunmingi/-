@@ -1,0 +1,233 @@
+/* styles.css */
+
+/* 기본 스타일 설정 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 상단바 스타일 */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
+}
+
+/* 기본 스타일 설정 */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px; /* 상단바 높이만큼 여백 추가 */
+}
+
+/* 제목 스타일 */
+h1.ttl {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* 회사 정보 스타일 */
+.company_info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.company_name a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.company_name a:hover {
+  text-decoration: underline;
+}
+
+.v_bar {
+  margin: 0 10px;
+}
+
+.job_location {
+  font-size: 14px;
+}
+
+/* 탭 버튼 스타일 */
+.tab_list {
+  display: flex;
+  margin-left: auto;
+}
+
+.tab_item {
+  margin-right: 10px;
+}
+
+.react_btn {
+  background: none;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab_item.on .react_btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.react_btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* 기업 소개 섹션 스타일 */
+.recruitment-detail__box {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.recruitment-detail__tit {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.recruitment-detail__txt {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* 게시판 섹션 스타일 */
+.board_section {
+  padding: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.board_title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.board_post {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.post_title a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.post_title a:hover {
+  text-decoration: underline;
+}
+
+.post_summary {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.post_date {
+  font-size: 12px;
+  color: #999;
+}
+
+.board_more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.board_more:hover {
+  text-decoration: underline;
+}
+
+/* 뉴스 링크 스타일 */
+a.relative {
+  display: block;
+  height: 50px;
+  padding: 0 16px;
+  font-size: 15px;
+  line-height: 50px;
+  color: #4b4c50;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+a.relative:hover {
+  color: #00c362;
+}
+
+a.relative::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  width: calc(100% - 32px);
+  background-color: #00c362;
+  transform: translateX(-50%);
+}
